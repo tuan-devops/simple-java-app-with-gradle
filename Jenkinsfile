@@ -10,7 +10,10 @@ pipeline {
     stage ('Build') {
       steps {
         echo 'Running build automation'
-        sh './gradlew build'
+        sh '''
+          chmod +x ./gradlew
+          ./gradlew build --no-daemon
+        '''
         archiveArtifacts artifacts: 'app/dist/app.zip'
       }
     }
