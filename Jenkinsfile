@@ -16,7 +16,7 @@ pipeline {
         echo 'Running build automation'
         sh '''
           chmod +x ./gradlew
-          ./gradlew build --no-daemon
+          ./gradlew build
         '''
         archiveArtifacts artifacts: 'app/dist/app.zip'
       }
