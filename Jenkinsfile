@@ -2,7 +2,7 @@ pipeline {
   agent {
     label {
       label 'Node-1'
-      retries 2
+      retries 3
     }
   }
 
